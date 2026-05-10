@@ -1,0 +1,13 @@
+localhost {
+	log
+	root demo/
+	php_server {
+		try_files {path} franken.php
+		worker {
+			file ./demo/franken.php
+			watch ./src/**/*.php
+			watch ./demo/**/*.php
+			num 4
+		}
+	}
+}
