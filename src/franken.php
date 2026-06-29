@@ -1,5 +1,5 @@
 <?php
-namespace nx;
+namespace ff;
 /**
  * FrankenPHP worker模式调用。设置log，worker执行后进行输出并清理。
  * $worker()返回truly时屏蔽后续处理
@@ -7,7 +7,7 @@ namespace nx;
  * @param callable|null $clear
  * @return void
  */
-function franken(callable $worker, callable $clear = null): void{
+function franken(callable $worker, ?callable $clear = null): void{
 	if(!container('^#log')){
 		container('^#log', fn($level, $message, $context) => frankenphp_log($message, [
 			'emergency' => 8,

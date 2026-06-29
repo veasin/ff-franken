@@ -1,11 +1,11 @@
-# nx-tiny-franken
+# ff-franken
 
-[FrankenPHP](https://frankenphp.dev) worker mode adapter for [nx-tiny](https://github.com/veasin/nx-tiny) micro-framework.
+[FrankenPHP](https://frankenphp.dev) worker mode adapter for [ff](https://github.com/veasin/ff) micro-framework.
 
 ## Install
 
 ```bash
-composer require veasin/nx-tiny-franken
+composer require veasin/ff-franken
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ composer require veasin/nx-tiny-franken
 // franken.php - FrankenPHP worker entry point
 include __DIR__ . '/vendor/autoload.php';
 
-use function nx\{container, franken, from, log, output, route};
+use function ff\{container, franken, from, log, output, route};
 
 container('count', 0);
 

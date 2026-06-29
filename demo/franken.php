@@ -2,7 +2,7 @@
 // frankenphp.exe run --config demo/Caddyfile
 include __DIR__ . "/../vendor/autoload.php";
 
-use function nx\{container, franken, from, log, output, route};
+use function ff\{container, franken, from, log, output, route};
 
 container('count', 0);
 franken(function(){
